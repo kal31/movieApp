@@ -11,13 +11,18 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1></h1>
+      <h1>Now playing</h1>
     </div>
     <div class="col-sm-12">
-
+      <% parsedData.forEach((movie) =>{ %>
+      <div class="col-sm-4 poster">
+        <a href="/movie/<%=movie.id%>"><img src="<%= imageBaseUrl + movie.poster_path %>" /> </a>
+      </div>
+      <% })%>
 
     </div>
   </div>
 </div>
 </body>
 </html>
+
